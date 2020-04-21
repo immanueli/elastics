@@ -1,0 +1,10 @@
+package com.imma.elastics.repository;
+
+import com.imma.elastics.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface UserRepository extends JpaRepository<User,Long> {
+
+}

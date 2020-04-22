@@ -9,10 +9,5 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-    @GetMapping("/hello")
-    public ModelAndView hello(Model model){
-        ModelAndView index = new ModelAndView("index");
-        model.addAttribute("name","imma");
-        return index;
-    }
+
 }

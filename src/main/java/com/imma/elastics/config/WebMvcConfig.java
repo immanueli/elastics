@@ -48,7 +48,7 @@ public class WebMvcConfig implements WebMvcConfigurer, ApplicationContextAware {
     public SpringResourceTemplateResolver templateResolver() {
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
         templateResolver.setApplicationContext(this.applicationContext);
-        templateResolver.setCharacterEncoding("utf-8");
+        templateResolver.setCharacterEncoding("UTF-8");
         return templateResolver;
     }
 
@@ -69,6 +69,7 @@ public class WebMvcConfig implements WebMvcConfigurer, ApplicationContextAware {
     @Bean
     public ThymeleafViewResolver thymeleafViewResolver() {
         ThymeleafViewResolver thymeleafViewResolver = new ThymeleafViewResolver();
+        thymeleafViewResolver.setCharacterEncoding("UTF-8");
         thymeleafViewResolver.setTemplateEngine(springTemplateEngine());
         return thymeleafViewResolver;
     }

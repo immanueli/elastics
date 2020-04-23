@@ -11,7 +11,7 @@ public class HomeController {
     @GetMapping("/hello")
     public ModelAndView hello(Model model){
         ModelAndView index = new ModelAndView("index");
-        model.addAttribute("name","imma");
+        model.addAttribute("name","站长");
         return index;
     }
 

@@ -32,7 +32,8 @@ public class WebMvcConfig implements WebMvcConfigurer, ApplicationContextAware {
      */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/")
+                .addResourceLocations("classpath:/resources/").addResourceLocations("classpath:/templates/");
     }
 
 
@@ -47,6 +48,7 @@ public class WebMvcConfig implements WebMvcConfigurer, ApplicationContextAware {
     public SpringResourceTemplateResolver templateResolver() {
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
         templateResolver.setApplicationContext(this.applicationContext);
+        templateResolver.setCharacterEncoding("utf-8");
         return templateResolver;
     }
 
